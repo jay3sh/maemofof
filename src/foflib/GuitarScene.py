@@ -293,7 +293,8 @@ class GuitarSceneClient(GuitarScene, SceneClient):
         self.keyBurstTimeout = self.engine.timer.time + self.keyBurstPeriod
         return True
       
-    if control in (Player.ACTION1, Player.ACTION2) and self.song:
+    #if control in (Player.ACTION1, Player.ACTION2) and self.song:
+    if self.song:
       self.doPick()
     elif control in KEYS and self.song:
       # Check whether we can tap the currently required notes
