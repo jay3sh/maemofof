@@ -127,12 +127,12 @@ class GameEngine(Engine):
     self.mode = mode
     if self.mode == 'n810':
       # For Maemo n810 these keys will replace the F1-F5 keys
-      Config.set("player", "key_1", pygame.K_QUOTE)
+      Config.set("player", "key_1", pygame.K_l)
       Config.set("player", "key_2", pygame.K_k)
       Config.set("player", "key_3", pygame.K_h)
       Config.set("player", "key_4", pygame.K_f)
       Config.set("player", "key_5", pygame.K_s)
-      Config.set("player", "key_action1", pygame.K_q)
+      Config.set("player", "key_action1", pygame.K_a)
     elif self.mode == 'desktop':
       Config.set("player", "key_1", pygame.K_F1)
       Config.set("player", "key_2", pygame.K_F2)
