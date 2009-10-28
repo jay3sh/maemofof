@@ -25,8 +25,6 @@ from Song import Note, Tempo
 from Mesh import Mesh
 import Theme
 
-from inkface.pygame import PygameFace
-
 import math
 USE_NUMPY = True
 try:
@@ -330,9 +328,6 @@ class Guitar:
   def renderNotes(self, visibility, song, pos):
     if not song:
       return
-
-    #face = PygameFace('guitar.svg')
-    #self.engine.video.screen.blit(face.guitar.sprite.image,face.guitar.get_position())
 
     # Update dynamic period
     self.currentPeriod = 60000.0 / self.currentBpm
