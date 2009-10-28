@@ -88,8 +88,8 @@ class Guitar:
         self.vertexCache    = Numeric.empty((8 * 4096, 3), Numeric.Float32)
         self.colorCache     = Numeric.empty((8 * 4096, 4), Numeric.Float32)
 
-    engine.resource.load(self,  "noteMesh", lambda: Mesh(engine.resource.fileName("note.dae")))
-    engine.resource.load(self,  "keyMesh",  lambda: Mesh(engine.resource.fileName("key.dae")))
+    #engine.resource.load(self,  "noteMesh", lambda: Mesh(engine.resource.fileName("note.dae")))
+    #engine.resource.load(self,  "keyMesh",  lambda: Mesh(engine.resource.fileName("key.dae")))
     self.hwatermark = 0
     self.lwatermark = 0
   def selectPreviousString(self):
