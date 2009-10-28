@@ -45,13 +45,13 @@ Config.define("player", "key_left",     str, "K_LEFT",   text = _("Move left"))
 Config.define("player", "key_right",    str, "K_RIGHT",  text = _("Move right"))
 Config.define("player", "key_up",       str, "K_UP",     text = _("Move up"))
 Config.define("player", "key_down",     str, "K_DOWN",   text = _("Move down"))
-Config.define("player", "key_action1",  str, "K_RETURN", text = _("Pick"))
+Config.define("player", "key_action1",  str, "K_a", text = _("Pick"))
 Config.define("player", "key_action2",  str, "K_RSHIFT", text = _("Secondary Pick"))
-Config.define("player", "key_1",        str, "K_F1",     text = _("Fret #1"))
-Config.define("player", "key_2",        str, "K_F2",     text = _("Fret #2"))
-Config.define("player", "key_3",        str, "K_F3",     text = _("Fret #3"))
-Config.define("player", "key_4",        str, "K_F4",     text = _("Fret #4"))
-Config.define("player", "key_5",        str, "K_F5",     text = _("Fret #5"))
+Config.define("player", "key_1",        str, "K_l",     text = _("Fret #1"))
+Config.define("player", "key_2",        str, "K_k",     text = _("Fret #2"))
+Config.define("player", "key_3",        str, "K_h",     text = _("Fret #3"))
+Config.define("player", "key_4",        str, "K_f",     text = _("Fret #4"))
+Config.define("player", "key_5",        str, "K_s",     text = _("Fret #5"))
 Config.define("player", "key_cancel",   str, "K_ESCAPE", text = _("Cancel"))
 Config.define("player", "name",         str, "")
 Config.define("player", "difficulty",   int, Song.EASY_DIFFICULTY)
@@ -66,6 +66,7 @@ class Controls:
         return getattr(pygame, k)
     
     self.flags = 0
+    '''
     self.controlMapping = {
       keycode("key_left"):      LEFT,
       keycode("key_right"):     RIGHT,
@@ -79,6 +80,21 @@ class Controls:
       keycode("key_4"):         KEY4,
       keycode("key_5"):         KEY5,
       keycode("key_cancel"):    CANCEL,
+    }
+    '''
+    self.controlMapping = {
+        pygame.K_LEFT       : LEFT,
+        pygame.K_RIGHT      : RIGHT,
+        pygame.K_UP         : UP,
+        pygame.K_DOWN       : DOWN,
+        pygame.K_a          : ACTION1,
+        pygame.K_RSHIFT     : ACTION2,
+        pygame.K_l          : KEY1,
+        pygame.K_k          : KEY2,
+        pygame.K_h          : KEY3,
+        pygame.K_f          : KEY4,
+        pygame.K_s          : KEY5,
+        pygame.K_p          : CANCEL,
     }
     
     # Multiple key support
